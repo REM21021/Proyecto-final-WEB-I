@@ -1,0 +1,65 @@
+:root {
+    --Fondo-Base: #121212;
+    --Superficies: #1E1E1E;
+    --Primario: #FF3366;
+    --Secundario: #00F0FF;
+    --Terciario: #FFE600;
+    --Texto-Principal: #F5F5F7;
+}
+
+body {
+    font-family: "Black Ops One", system-ui;
+    font-weight: 200;
+    font-style: normal;
+    background-color: var(--Fondo-Base);
+    color: var(--Texto-Principal);
+}
+
+header {
+    background-color: var(--Superficies);
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+footer {
+    border: 60px solid transparent;
+    display: flex;
+    justify-content: space-around;
+}
+
+.pie__columnas {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+footer section ul {
+    list-style: none;
+    margin-inline: 20px;
+}
+
+.pie__enlaces {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--Texto-Principal);
+    list-style: none;
+}
+footer p {
+    font-size: 20px;
+    color:#474747;
+}
+
+.texto_gradiente {
+    background: -webkit-linear-gradient(left, var(--Primario), var(--Secundario), var(--Terciario));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
