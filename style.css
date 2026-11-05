@@ -1,6 +1,7 @@
 :root {
     --Fondo-Base: #121212;
-    --Superficies: #1E1E1E;
+    --Fondo-Secundario: #ffffff;
+    --Superficies: #222222;
     --Primario: #FF3366;
     --Secundario: #00F0FF;
     --Terciario: #FFE600;
@@ -26,6 +27,7 @@ main {
     display: flex;
     align-items: center;
     flex-direction: column;
+    min-height: 60vh;
 }
 
 footer {
@@ -62,4 +64,53 @@ footer p {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+.menu__categorias
+.categoria {
+    margin: 20px;
+    background-color: var(--Superficies);
+    border: #FF3366 3px solid;
+    border-radius: 10px;
+    width: 1500px;
+    padding-block: 15px;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+summary {
+    padding-left: 10px;
+}
+.categoria__submenu {
+    display: flex;
+    justify-content: space-around;
+    border-top: var(--Primario) 3px solid;
+    padding-top: 25px;
+    list-style: none;
+    padding-left: 0;
+    padding-inline: 15px;
+}
+.categoria__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 250px;
+    min-width: 250px;
+    border-radius: 20px;
+    border: var(--Secundario) solid 5px;
+    color: var(--Texto-Principal);
+    text-decoration: none;
+    padding: 5px;
+}
+.categoria__card:hover {
+    background-color: var(--Fondo-Secundario);
+    color: var(--Fondo-Base);
+    border: var(--Terciario) solid 5px;
+}
+.categoria__card__img {
+    margin-top: 10px;
+    width: 200px;
+    background-color: var(--Fondo-Secundario);
+    border-radius: 20px;
 }
