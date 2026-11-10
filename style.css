@@ -83,7 +83,8 @@ summary {
 }
 .categoria__submenu {
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    justify-content: flex-start;
     border-top: var(--Primario) 3px solid;
     padding-top: 25px;
     list-style: none;
@@ -102,11 +103,15 @@ summary {
     color: var(--Texto-Principal);
     text-decoration: none;
     padding: 5px;
+    margin-inline: 12px;
+    margin-bottom: 24px;
 }
 .categoria__card:hover {
     background-color: var(--Fondo-Secundario);
     color: var(--Fondo-Base);
     border: var(--Terciario) solid 5px;
+    transform: translateY(-8px);
+    box-shadow: 0 15px 3px rgb(255, 255, 255);
 }
 .categoria__card__img {
     margin-top: 10px;
