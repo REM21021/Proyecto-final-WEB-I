@@ -71,7 +71,6 @@ footer p {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-.menu__categorias
 .categoria {
     margin: 20px;
     background-color: var(--Superficies);
@@ -123,23 +122,41 @@ summary {
     background-color: var(--Fondo-Secundario);
     border-radius: 20px;
 }
+.productos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding-top: 25px;
+    list-style: none;
+    padding-inline: 15px;
+    width: 100hv;
+}
 .producto__card {
+    background-color: var(--Superficies);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    height: 250px;
+    max-width: 250px;
     min-width: 250px;
     border-radius: 20px;
     border: var(--Terciario) solid 5px;
     color: var(--Texto-Principal);
     text-decoration: none;
-    padding: 5px;
+    padding: 10px;
     margin-inline: 12px;
     margin-bottom: 24px;
+    text-align: center;
 }
-.categoria__card:hover {
+.producto__card:hover {
     background-color: var(--Fondo-Secundario);
     color: var(--Fondo-Base);
     border: var(--Secundario) solid 5px;
+}
+.producto__card img{
+    margin-top: 10px;
+    width: 200px;
+    height: 200px;
+    background-color: var(--Fondo-Secundario);
+    border-radius: 20px;
 }
