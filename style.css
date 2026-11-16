@@ -22,6 +22,12 @@ header {
     align-items: center;
     font-size: 25px;
 }
+.header__logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--Texto-Principal);
+}
 
 main {
     display: flex;
@@ -110,12 +116,30 @@ summary {
     background-color: var(--Fondo-Secundario);
     color: var(--Fondo-Base);
     border: var(--Terciario) solid 5px;
-    transform: translateY(-8px);
-    box-shadow: 0 15px 3px rgb(255, 255, 255);
 }
 .categoria__card__img {
     margin-top: 10px;
     width: 200px;
     background-color: var(--Fondo-Secundario);
     border-radius: 20px;
+}
+.producto__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 250px;
+    min-width: 250px;
+    border-radius: 20px;
+    border: var(--Terciario) solid 5px;
+    color: var(--Texto-Principal);
+    text-decoration: none;
+    padding: 5px;
+    margin-inline: 12px;
+    margin-bottom: 24px;
+}
+.categoria__card:hover {
+    background-color: var(--Fondo-Secundario);
+    color: var(--Fondo-Base);
+    border: var(--Secundario) solid 5px;
 }
