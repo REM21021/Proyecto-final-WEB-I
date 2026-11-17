@@ -21,12 +21,25 @@ header {
     display: flex;
     align-items: center;
     font-size: 25px;
+    justify-content: space-between;
+    padding-inline: 20px;
+    max-width: 100vw;
 }
+
 .header__logo {
+    border-radius: 20px;
+    border: transparent solid 5px;
     display: flex;
     align-items: center;
     text-decoration: none;
     color: var(--Texto-Principal);
+}
+.header__logo:hover {
+    background-image:
+                linear-gradient(var(--Fondo-Base), var(--Fondo-Base)),
+                linear-gradient(45deg, var(--Primario), var(--Secundario), var(--Terciario));
+            background-origin: border-box;
+            background-clip: content-box, border-box;
 }
 
 main {
@@ -60,9 +73,10 @@ footer section ul {
     color: var(--Texto-Principal);
     list-style: none;
 }
+
 footer p {
     font-size: 20px;
-    color:#474747;
+    color: #474747;
 }
 
 .texto_gradiente {
@@ -71,6 +85,7 @@ footer p {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
 .categoria {
     margin: 20px;
     background-color: var(--Superficies);
@@ -83,9 +98,11 @@ footer p {
     flex-direction: column;
     justify-content: flex-start;
 }
+
 summary {
     padding-left: 10px;
 }
+
 .categoria__submenu {
     display: flex;
     flex-wrap: wrap;
@@ -96,6 +113,7 @@ summary {
     padding-left: 0;
     padding-inline: 15px;
 }
+
 .categoria__card {
     display: flex;
     flex-direction: column;
@@ -111,18 +129,21 @@ summary {
     margin-inline: 12px;
     margin-bottom: 24px;
 }
+
 .categoria__card:hover {
     background-color: var(--Fondo-Secundario);
     color: var(--Fondo-Base);
     border: var(--Terciario) solid 5px;
 }
+
 .categoria__card__img {
     margin-top: 10px;
     width: 200px;
     background-color: var(--Fondo-Secundario);
     border-radius: 20px;
 }
-.productos{
+
+.productos {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
@@ -131,6 +152,7 @@ summary {
     padding-inline: 15px;
     width: 100hv;
 }
+
 .producto__card {
     background-color: var(--Superficies);
     display: flex;
@@ -148,15 +170,95 @@ summary {
     margin-bottom: 24px;
     text-align: center;
 }
+
 .producto__card:hover {
     background-color: var(--Fondo-Secundario);
     color: var(--Fondo-Base);
     border: var(--Secundario) solid 5px;
 }
-.producto__card img{
+
+.producto__card img {
     margin-top: 10px;
     width: 200px;
     height: 200px;
     background-color: var(--Fondo-Secundario);
     border-radius: 20px;
 }
+
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 50%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.header__inicio {
+    color: var(--Texto-Principal);
+    text-decoration: none;
+    padding: 20px;
+}
+.header__inicio:hover{
+    background: -webkit-linear-gradient(left, var(--Primario), var(--Secundario), var(--Terciario));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.desplegable {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    width: 191px;
+    border: transparent solid 5px;
+}
+
+.desplegable__contenido {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: -5px;
+    background-color: var(--Superficies);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    list-style: none;
+    padding: 0;
+    z-index: 10;
+    border: transparent solid 5px;
+    background-image:
+        linear-gradient(var(--Fondo-Base), var(--Fondo-Base)),
+        linear-gradient(90deg, var(--Primario), var(--Secundario), var(--Terciario));
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top: none;
+}
+
+.desplegable__contenido a {
+    color: var(--Texto-Principal);
+    text-decoration: none;
+    margin: 5px;
+}
+.desplegable__contenido a:hover{
+    background-color: var(--Fondo-Secundario);
+    color: var(--Fondo-Base);
+}
+
+.desplegable:hover {
+    background-image:
+        linear-gradient(var(--Fondo-Base), var(--Fondo-Base)),
+        linear-gradient(90deg, var(--Primario), var(--Secundario), var(--Terciario));
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom: none;
+}
+
+.desplegable:hover .desplegable__contenido {
+    display: flex;
+    flex-direction: column;
+    width: 191px;
+}
+
