@@ -10,65 +10,89 @@
 
 body {
     font-family: "Black Ops One", system-ui;
+    /* Define la tipografía principal y su familia de respaldo */
     font-weight: 200;
+    /* Establece el grosor de la fuente */
     font-style: normal;
+    /* Indica que la fuente no va en cursiva ni oblicua */
     background-color: var(--Fondo-Base);
+    /* Define el color de fondo del elemento */
     color: var(--Texto-Principal);
+    /* Define el color del texto */
 }
 
 header {
     background-color: var(--Superficies);
     display: flex;
+    /* Activa el modelo de diseño flexible (Flexbox) */
     align-items: center;
+    /* Alinea los hijos en el eje transversal (vertical por defecto) */
     font-size: 25px;
+    /* Define el tamaño del texto */
     justify-content: space-between;
+    /* Distribuye los hijos separándolos al máximo con espacio entre ellos */
     padding-inline: 20px;
+    /* Aplica relleno horizontal (izquierda y derecha según escritura) */
     max-width: 100vw;
+    /* Limita el ancho máximo al 100% del ancho de la ventana gráfica */
 }
 
 .header__logo {
     border-radius: 20px;
+    /* Redondea las esquinas del borde */
     border: transparent solid 5px;
+    /* Define grosor, estilo y color del borde */
     display: flex;
     align-items: center;
     text-decoration: none;
+    /* Quita decoraciones de texto como el subrayado en enlaces */
     color: var(--Texto-Principal);
 }
 
 .header__logo h1 {
     margin-right: 15px;
+    /* Añade margen exterior a la derecha */
 }
 
 .header__logo:hover {
     background-image:
         linear-gradient(var(--Fondo-Base), var(--Fondo-Base)),
         linear-gradient(45deg, var(--Primario), var(--Secundario), var(--Terciario));
+    /* Establece una o más imágenes o degradados de fondo */
     background-origin: border-box;
+    /* Define desde dónde se calcula el origen del fondo (borde, relleno o contenido) */
     background-clip: content-box, border-box;
+    /* Define hasta dónde se recorta/dibuja el fondo */
 }
 
 main {
     display: flex;
     align-items: center;
     flex-direction: column;
+    /* Organiza los elementos flexibles en columna (de arriba abajo) */
     min-height: 60vh;
+    /* Establece la altura mínima en función del alto de la ventana gráfica */
 }
 
 footer {
     border: 60px solid transparent;
     display: flex;
     justify-content: space-around;
+    /* Distribuye los elementos con espacio similar alrededor de cada uno */
 }
 
 .pie__columnas {
     display: flex;
     flex-direction: row;
+    /* Organiza los elementos flexibles en fila (de izquierda a derecha) */
     list-style: none;
+    /* Quita viñetas o numeración de listas */
 }
 
 footer section ul {
     list-style: none;
     margin-inline: 20px;
+    /* Aplica margen horizontal (izquierda y derecha según escritura) */
 }
 
 .pie__enlaces {
@@ -86,34 +110,45 @@ footer p {
 
 .texto_gradiente {
     background: -webkit-linear-gradient(left, var(--Primario), var(--Secundario), var(--Terciario));
+    /* Atajo para propiedades de fondo (color, imagen, posición, repetición, etc.) */
     background-clip: text;
     -webkit-background-clip: text;
+    /* Versión con prefijo webkit para recortar el fondo a la forma del texto */
     -webkit-text-fill-color: transparent;
+    /* Hace transparente el relleno del texto para que se vea el fondo detrás */
 }
 
 .categoria {
     margin: 20px;
+    /* Establece el margen exterior en los cuatro lados */
     background-color: var(--Superficies);
     border: #FF3366 3px solid;
     border-radius: 10px;
     width: 1500px;
+    /* Define el ancho fijo del elemento */
     padding-block: 15px;
+    /* Aplica relleno vertical (arriba y abajo según escritura) */
     font-size: 18px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    /* Alinea los elementos flexibles al inicio del eje principal */
 }
 
 summary {
     padding-left: 10px;
+    /* Añade relleno interior a la izquierda */
 }
 
 .categoria__submenu {
     display: flex;
     flex-wrap: wrap;
+    /* Permite que los elementos flexibles salten a la siguiente línea si no caben */
     justify-content: flex-start;
     border-top: var(--Primario) 3px solid;
+    /* Define el borde superior del elemento */
     padding-top: 25px;
+    /* Añade relleno interior arriba */
     list-style: none;
     padding-left: 0;
     padding-inline: 15px;
@@ -125,14 +160,18 @@ summary {
     align-items: center;
     justify-content: space-around;
     height: 250px;
+    /* Define la altura fija del elemento */
     min-width: 250px;
+    /* Establece el ancho mínimo del elemento */
     border-radius: 20px;
     border: var(--Secundario) solid 5px;
     color: var(--Texto-Principal);
     text-decoration: none;
     padding: 5px;
+    /* Establece el relleno interior en los cuatro lados */
     margin-inline: 12px;
     margin-bottom: 24px;
+    /* Añade margen exterior abajo */
 }
 
 .categoria__card:hover {
@@ -143,6 +182,7 @@ summary {
 
 .categoria__card__img {
     margin-top: 10px;
+    /* Añade margen exterior arriba */
     width: 200px;
     background-color: var(--Fondo-Secundario);
     border-radius: 20px;
@@ -174,6 +214,7 @@ summary {
     margin-inline: 12px;
     margin-bottom: 24px;
     text-align: center;
+    /* Alinea horizontalmente el texto dentro del elemento */
 }
 
 .producto__card:hover {
@@ -216,6 +257,7 @@ nav {
     display: flex;
     flex-direction: column;
     position: relative;
+    /* Posiciona el elemento relativo a su posición normal y sirve de referencia para hijos absolutos */
     align-items: center;
     width: 191px;
     border: transparent solid 5px;
@@ -223,15 +265,21 @@ nav {
 
 .desplegable__contenido {
     display: none;
+    /* Oculta el elemento y elimina su espacio en el flujo del documento */
     position: absolute;
+    /* Posiciona el elemento respecto a su ancestro posicionado más cercano */
     top: 100%;
+    /* Coloca el borde superior justo al 100% de la altura del contenedor padre */
     left: -5px;
+    /* Desplaza el borde izquierdo 5px hacia afuera */
     background-color: var(--Superficies);
     min-width: 160px;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    /* Agrega una sombra proyectada alrededor del elemento */
     list-style: none;
     padding: 0;
     z-index: 10;
+    /* Controla el orden de apilamiento (profundidad) en el eje Z */
     border: transparent solid 5px;
     background-image:
         linear-gradient(var(--Fondo-Base), var(--Fondo-Base)),
@@ -239,7 +287,9 @@ nav {
     background-origin: border-box;
     background-clip: content-box, border-box;
     border-bottom-left-radius: 10px;
+    /* Redondea la esquina inferior izquierda */
     border-bottom-right-radius: 10px;
+    /* Redondea la esquina inferior derecha */
 }
 
 .desplegable__contenido a {
@@ -260,8 +310,11 @@ nav {
     background-origin: border-box;
     background-clip: content-box, border-box;
     border-top-left-radius: 10px;
+    /* Redondea la esquina superior izquierda */
     border-top-right-radius: 10px;
+    /* Redondea la esquina superior derecha */
     border-bottom: none;
+    /* Elimina el borde inferior */
 }
 
 .desplegable:hover .desplegable__contenido {
@@ -295,6 +348,7 @@ nav {
 .producto__informacion__precio {
     margin: 20px;
     margin-left: 75px;
+    /* Añade margen exterior a la izquierda */
     color: var(--Terciario);
 }
 
@@ -320,6 +374,7 @@ nav {
     align-items: center;
     width: 98%;
 }
+
 .comprar summary {
     padding: 10px;
 }
@@ -335,7 +390,7 @@ nav {
     padding: none;
     padding-left: 0;
     padding: none;
-    margin: none;   
+    margin: none;
 }
 
 .comprar__tienda a {
@@ -350,4 +405,8 @@ nav {
     height: 20px;
     max-width: 30px;
     margin-right: 10px;
+}
+:hover {
+    transition: all 0.2s ease-in-out;
+    /* Anima suavemente los cambios de propiedades durante 0.2s */
 }
