@@ -34,12 +34,17 @@ header {
     text-decoration: none;
     color: var(--Texto-Principal);
 }
+
+.header__logo h1 {
+    margin-right: 15px;
+}
+
 .header__logo:hover {
     background-image:
-                linear-gradient(var(--Fondo-Base), var(--Fondo-Base)),
-                linear-gradient(45deg, var(--Primario), var(--Secundario), var(--Terciario));
-            background-origin: border-box;
-            background-clip: content-box, border-box;
+        linear-gradient(var(--Fondo-Base), var(--Fondo-Base)),
+        linear-gradient(45deg, var(--Primario), var(--Secundario), var(--Terciario));
+    background-origin: border-box;
+    background-clip: content-box, border-box;
 }
 
 main {
@@ -193,17 +198,20 @@ nav {
     justify-content: space-between;
     flex-wrap: wrap;
 }
+
 .header__inicio {
     color: var(--Texto-Principal);
     text-decoration: none;
     padding: 20px;
 }
-.header__inicio:hover{
+
+.header__inicio:hover {
     background: -webkit-linear-gradient(left, var(--Primario), var(--Secundario), var(--Terciario));
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
 .desplegable {
     display: flex;
     flex-direction: column;
@@ -232,7 +240,6 @@ nav {
     background-clip: content-box, border-box;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    border-top: none;
 }
 
 .desplegable__contenido a {
@@ -240,7 +247,8 @@ nav {
     text-decoration: none;
     margin: 5px;
 }
-.desplegable__contenido a:hover{
+
+.desplegable__contenido a:hover {
     background-color: var(--Fondo-Secundario);
     color: var(--Fondo-Base);
 }
@@ -262,3 +270,84 @@ nav {
     width: 191px;
 }
 
+.producto {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 75%;
+}
+
+.producto__informacion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    margin-top: 3%;
+    border: var(--Terciario) 1px solid;
+    padding: 20px;
+    justify-content: space-between;
+}
+
+.producto__informacion__titulo {
+    font-size: 40px;
+}
+
+.producto__informacion__precio {
+    margin: 20px;
+    margin-left: 75px;
+    color: var(--Terciario);
+}
+
+.producto__presentacion {
+    margin-top: 3%;
+    border: var(--Terciario) 1px solid;
+    padding: 20px;
+}
+
+.producto__presentacion img {
+    height: 670px;
+    width: 670px;
+    border-radius: 25px;
+}
+
+.comprar {
+    display: flex;
+    flex-direction: column;
+    border: solid var(--Terciario) 2px;
+    border-radius: 20px;
+    width: 500px;
+    margin-bottom: 20%;
+    align-items: center;
+    width: 98%;
+}
+.comprar summary {
+    padding: 10px;
+}
+
+.comprar__tienda a:hover {
+    background-color: var(--Fondo-Secundario);
+    color: var(--Fondo-Base);
+}
+
+.comprar ul {
+    border-top: solid var(--Terciario) 2px;
+    list-style: none;
+    padding: none;
+    padding-left: 0;
+    padding: none;
+    margin: none;   
+}
+
+.comprar__tienda a {
+    text-decoration: none;
+    color: var(--Texto-Principal);
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+.comprar__logo {
+    height: 20px;
+    max-width: 30px;
+    margin-right: 10px;
+}
